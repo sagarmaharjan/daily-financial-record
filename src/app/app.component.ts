@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'daily-financial-record';
+  title = 'daily financial record';
+  monthlySetup: boolean= true;
+
+  toggleMonthlySetup() {
+    this.monthlySetup = !this.monthlySetup;
+  }
+
+  onCanceled(e) {
+    this.monthlySetup = e;
+  }
 }
