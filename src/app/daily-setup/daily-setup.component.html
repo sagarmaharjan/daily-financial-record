@@ -1,0 +1,32 @@
+<div>
+    Your Monthly Budget: {{monthlyBudget}}<br>
+    Your Daily Buget: {{dailyBudget}}<br>
+    <button (click)="toggleListForm()">{{buttonText}}</button>
+    <form *ngIf="showForm">
+        <input type="text" placeholder="Name of Item">
+        <input type="number" placeholder="Cost">
+        <button type="submit">Add</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Expense</th>
+                <th>Save</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>00</td>
+                <td>00</td>
+                <td>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

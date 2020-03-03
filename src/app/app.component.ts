@@ -8,12 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'daily financial record';
   monthlySetup: boolean= true;
+  dailySetup: boolean = false;
 
   toggleMonthlySetup() {
     this.monthlySetup = !this.monthlySetup;
   }
 
   onCanceled(e) {
-    this.monthlySetup = e;
+    this.monthlySetup = e.monthly;
+    this.dailySetup = e.daily;
   }
 }
